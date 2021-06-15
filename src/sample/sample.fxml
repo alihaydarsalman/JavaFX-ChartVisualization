@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="1095.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <Button layoutX="855.0" layoutY="39.0" mnemonicParsing="false" onAction="#getURL" prefHeight="25.0" prefWidth="142.0" text="Get from URL" />
+        <RadioButton fx:id="barRadio" layoutX="139.0" layoutY="644.0" mnemonicParsing="false" onAction="#actionBarRadio" text="Bar Chart">
+            <toggleGroup>
+                <ToggleGroup fx:id="group" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="lineRadio" layoutX="22.0" layoutY="644.0" mnemonicParsing="false" text="Line Chart" toggleGroup="$group" />
+        <Button fx:id="AnimationButton" layoutX="916.0" layoutY="640.0" mnemonicParsing="false" onAction="#createBarChart" text="Start Animation" />
+        <TextField fx:id="textURL" layoutX="243.0" layoutY="39.0" prefHeight="25.0" prefWidth="592.0" />
+        <Label layoutX="255.0" layoutY="14.0" text="URL" />
+        <Button fx:id="selectFileButton" layoutX="59.0" layoutY="39.0" mnemonicParsing="false" onAction="#readFile" text="Choose a File" />
+        <Label layoutX="59.0" layoutY="14.0" text="Local File" />
+        <Line endX="12.0" endY="2.0" layoutX="185.0" layoutY="38.0" startX="12.0" startY="24.0" stroke="#8d8d8d" />
+        <Text fx:id="titleText" layoutX="391.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Title" textAlignment="CENTER" />
+        <Text fx:id="labelText" layoutX="855.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="xAxisLabel" />
+        <Label fx:id="flashText" layoutX="308.0" layoutY="550.0" text="The file has been read." visible="false">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Label>
+        <VBox fx:id="vBoxText" layoutX="34.0" layoutY="100.0" prefHeight="407.0" prefWidth="99.0" />
+        <FlowPane fx:id="flowPane" layoutX="34.0" layoutY="578.0" prefHeight="47.0" prefWidth="878.0" />
+        <VBox fx:id="vBox" layoutX="132.0" layoutY="100.0" prefHeight="414.0" prefWidth="785.0" />
+        <VBox fx:id="vBoxValue" layoutX="932.0" layoutY="104.0" prefHeight="407.0" prefWidth="99.0" />
+        <Text fx:id="textYear" layoutX="513.0" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time" />
+    </children>
+</AnchorPane>
